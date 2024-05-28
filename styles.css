@@ -1,9 +1,10 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'monserrat';
+    font-family: sans-serif;
     background-color: #e2eaff;
     color: #101532dd;
 }
@@ -26,6 +27,7 @@ body,div,ul,nav,header,footer,a,li,label {
     z-index: 10;
     text-align: center;
     font-size: 20px;
+    padding: 8px;
 }
 .header__open-nav-button {
     color: #48e;
@@ -279,6 +281,7 @@ h1 {
     background-size: cover;
     display: grid;
     place-content: center;
+    border-radius: 8px;
 }
 
 .portfolio__project:hover {
@@ -327,3 +330,94 @@ h1 {
 }
 
 /* PORTFOLIO ENDS */
+
+
+
+
+/* CONTACT SECTION */
+
+.form{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    container-name: form;
+    container-type: inline-size;
+    
+}
+
+
+.form__form{
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+}
+
+.form__input-container :is(input, textarea){
+    width: 100%;
+    padding: 9px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+}
+
+
+.form__input-container textarea{
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"]{
+    padding: 12px;
+    background-color: #48e;
+    color: #fff;
+}
+
+.form h2{
+    font-size: 2.4rem;
+}
+
+/* CONTACT QUERIES*/
+
+@container form (min-width: 56.25rem){
+
+    .form__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "name lastname"
+        "email email"
+        "message message"
+        "button button"
+        ;
+        gap: 12px;
+        background-image: linear-gradient(#18233f06,#18233f33);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 40px #0006;
+    }
+
+    .form__input-container:first-child {
+        grid-area: name;
+    }
+    .form__input-container:nth-child(2) {
+        grid-area: lastname;
+    }
+    .form__input-container:nth-child(3) {
+        grid-area: email;
+    }
+    .form__input-container:nth-child(4) {
+        grid-area: message;
+    }
+    .form__input-container:nth-child(5) {
+        grid-area: button;
+    }
+}
+
+/* CONTACT ENDS */
+
+
