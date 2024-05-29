@@ -4,7 +4,7 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'montserrat';
     background-color: #e2eaff;
     color: #101532dd;
 }
@@ -15,7 +15,6 @@ body,div,ul,nav,header,footer,a,li,label {
 }
 
 /* HEADER SECTION */
-
 .header{
     background-color: #fff;
     display: flex;
@@ -63,7 +62,6 @@ body,div,ul,nav,header,footer,a,li,label {
     justify-content: space-evenly;
 }
 
-
 .header__checkbox:checked ~ .header__nav{
     display: flex;
     
@@ -88,7 +86,6 @@ body,div,ul,nav,header,footer,a,li,label {
 }
 
 /* HEADER QUERIES */
-
 @container header (min-width: 600px){
     .header__nav {
         display: block;
@@ -115,7 +112,6 @@ body,div,ul,nav,header,footer,a,li,label {
 
 
 /* PROFILE SECTION */
-
 .profile {
     container-name: profile;
     container-type: inline-size;
@@ -141,12 +137,13 @@ body,div,ul,nav,header,footer,a,li,label {
 .profile__img {
     max-width: 100%;
     width: 720px;
+    
 }
 
 h1 {
     color: #26a;
-}
 
+}
 
 .profile__skills-container h2 {
     color: #26a;
@@ -198,7 +195,6 @@ h1 {
 }
 
 /* PROFILE QUERIES */
-
 @container profile (min-width: 720px){
     .profile__wrapper {
         flex-direction: row;
@@ -235,18 +231,13 @@ h1 {
         height: 100%;
         object-fit: cover;
         width: 620px;
+        
     }
 
 }
-
 /* PROFILE ENDS */
 
-
-
-
 /* PORTFOLIO SECTION */
-
-
 .portfolio {
     background-color: #18233f;
     color: #fff;
@@ -276,7 +267,7 @@ h1 {
 }
 
 .portfolio__project {
-    background-image: linear-gradient(#0006,#0006), url("imageWEB.jpg");
+    background-image: linear-gradient(#0006,#0006), url("project-image2.jpg");
     background-position: center;
     background-size: cover;
     display: grid;
@@ -288,10 +279,6 @@ h1 {
     opacity: 0.74;
     outline: 2px solid #fff6;
 }
-
-
-
-
 /* PORTFOLIO QUERIES */
 
 @container portfolio (min-width: 56.25rem){
@@ -300,7 +287,6 @@ h1 {
         grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
         
     }
-
 
     .portfolio__project:first-child {
         grid-column: span 2;
@@ -318,7 +304,6 @@ h1 {
         
     }
 
-
     .portfolio__project:first-child {
         grid-column: span 2;
         grid-row: span 2;
@@ -330,9 +315,6 @@ h1 {
 }
 
 /* PORTFOLIO ENDS */
-
-
-
 
 /* CONTACT SECTION */
 
@@ -347,7 +329,6 @@ h1 {
     container-type: inline-size;
     
 }
-
 
 .form__form{
     padding: 12px;
@@ -364,7 +345,6 @@ h1 {
     border: none;
     box-shadow: 2px 2px 4px #0003;
 }
-
 
 .form__input-container textarea{
     resize: none;
@@ -417,7 +397,6 @@ h1 {
         grid-area: button;
     }
 }
-
 /* CONTACT ENDS */
 
 
